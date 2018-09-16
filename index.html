@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+
+<html>
+
+  <head>
+    <title>Дом</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans" rel="stylesheet">
+    <link rel="icon" type="image/png" href="icon.png">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  </head>
+
+<body>
+<div class="site">
+
+<header class="myheader">
+
+  <div class="logo">
+    <img src="logo.svg" width="80" height="80" alt="home">
+  </div>
+
+  <nav class="main-menu">
+    <ul>
+      <li><a class="dashed" href="http://127.0.0.1:8886/julia/">сайт Юли</a></li>
+      <li><a class="dashed" href="http://127.0.0.1:8886/bootstrap/">бутстрап</a></li>
+      <li><a class="dashed" href="http://127.0.0.1:8886/ilia">мой сайт</a></li>
+      <li><a class="dashed" href="http://127.0.0.1:8886/slideshow">охуенное слайдшоу</a></li>
+      <li><a class="dashed" href="http://127.0.0.1:8886/superslideshow">e24</a></li>
+      <li><a class="dashed" href="http://127.0.0.1:8886/amp/article.amp.html#development=1">amp</a></li>
+      <li><a class="dashed" href="http://127.0.0.1:8886/grid/">grid</a></li>
+    </ul>
+  </nav>
+</header>
+ 
+  <section class="mylist">
+    <h1><span class="pianzina">mylist</span></h1>
+    <ul class="ullist">
+      <li>список
+        <ul>
+            <li>потому что а)
+              <ul>
+                <li>а здесь еще один уровень
+                  <ul>
+                    <li>в котором еще один уровень</li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+            <li>потому что б)</li>
+          </li>
+        </ul>
+      </li>
+    </ul>
+
+    <section class="myaudio">
+      <audio controls>
+        <source src="#.mp3" type="audio/mpeg">
+        <source src="#.oga" type="audio/ogg">
+      </audio>
+    </section>
+  </section>
+
+  <article class="mypost">
+    <header>
+      <h2>mypost</h2>
+      <time datetime="2018-09-15T11:00:00">
+        15 сентября 2018
+      </time>
+    </header>
+
+    <section class="content">
+      <figure>
+        <img alt="kitty" title="kitty" src="https://www.catster.com/wp-content/uploads/2017/08/A-fluffy-cat-looking-funny-surprised-or-concerned.jpg" width="350px">
+      <figcaption>Кот</figcaption>
+      </figure>
+    </section>
+  </article>
+
+  <!-- разобраться как выравнивать ячейки при изменении ширины -->
+  <article class="mytable">
+
+    <table>
+      <caption>mytable</caption>
+      <tr>
+        <th rowspan="2">Таблица</th>
+        <th colspan="2">Столбец</th>
+        <th colspan="2">Столбец</th>
+        <th rowspan="2">Еще один</th>
+      </tr>
+      <tr>
+        <th>Столбечек</th>
+        <th>Столбечек</th>
+        <th>Столбечек</th>
+        <th>Столбечек</th>
+      </tr>
+      <tr>
+        <td>ячейка</td>
+        <td>ячейка</td>
+        <td>ячейка</td>
+        <td class="fillintable" rowspan="2" colspan="2">ячейка</td>
+        <td>ячейка</td>
+      </tr>
+      <tr>
+        <td>ячейка</td>
+        <td colspan="2">ячейка</td>
+        <td rowspan="2">ячейка</td>
+      </tr>
+      <tr>
+        <td>ячейка</td>
+        <td>ячейка</td>
+        <td>ячейка</td>
+        <td>ячейка</td>
+        <td>ячейка</td>
+      </tr>
+    </table>
+  </article>
+
+  <article class="myforms">
+
+    <form>
+      
+      <label for="input1">Логин</label>
+      <input id="input1" type="text" name="myinput">
+      <label for="input2">Пароль</label>
+      <input id="input2" type="password" name="password">
+
+      <input id="input3" type="submit" value="Сабмит">
+
+      <br>
+      <br>
+
+      <textarea id="input4" name="comment" rows="2" cols="30">myforms</textarea>
+
+      <br>
+      <br>
+
+      <input id="input5" type="checkbox" name="galochka">
+      <label for="input5">пункт</label>
+
+      <input id="input6" type="checkbox" name="galochka" checked>
+      <label for="input6">пункт</label>
+
+      <!-- для radio обязателен тег value -->
+      <input id="input7" type="radio" name="radio" value="p">
+      <label for="input7">радио</label>
+
+      <!-- для нескольких вариантов надо name оставить таким же, но изменить value -->
+      <input id="input8" type="radio" name="radio" value="p" checked>
+      <label for="input8">радио</label>
+
+      <br>
+      <br>
+
+      <!-- Если при отправке формы у выбранного варианта задан value, то на сервер отправится значение этого атрибута. В противном случае будет отправлен текст подписи. -->
+      <select name="theme">
+        <option value="light">light</option>
+        <option value="dark">dark</option>
+      </select>
+
+      <br>
+      <br>
+
+      <!-- При отправке данных мультиселекта на сервер с PHP после имени в значении атрибута name ставятся символы квадратных скобок []. Например, <select name="days[]">. Это необязательное требование для имени мультиселекта, а нужно только для корректной обработки данных в PHP. -->
+      <select name="theme" multiple size="5">
+        <option value="light" selected>light</option>
+        <option value="dark">dark</option>
+      </select>
+    </form>
+
+    <br>
+
+    <form enctype="multipart/form-data">
+
+      <!-- Для этого поля обязательным атрибутом является имя. -->
+      <input id="input9" type="file" name="fileupload">
+
+      <!-- скрытые поля -->
+      <input type="hidden" name="account_number" value="15">
+    </form>
+  </article>
+
+<footer class="myfooter">
+
+  <span class="info">
+    Lorem ipsum is the best company in this room
+  </span>
+
+  <span class="copyright">
+    (c) 2018
+  </span>
+</footer>
+
+<!-- <script src="script.js" type="text/javascript"></script> -->
+
+</div>
+</body>
+
+</html>

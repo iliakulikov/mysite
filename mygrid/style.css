@@ -1,0 +1,242 @@
+/*global selectors*/
+
+  html,
+  body {
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+    font-family: 'Noto Sans', sans-serif;
+  }
+
+/*header */
+
+  header {
+    padding: 20px;
+    background-color: white;
+  }
+
+  .logo {
+    position: absolute;
+    top: 10px;
+    left: 20px;
+    margin: 0;
+    z-index: 1;
+  }
+
+  .main-menu ul {
+    margin: 0;
+    margin-left: 130px;
+    padding: 0;
+    list-style: none;
+  }
+
+  .main-menu li {
+    display: inline-block;
+    margin-right: 1em;
+  }
+
+  .main-menu li:hover {
+    background-color: #b3ccff;
+  }
+
+  .dashed {
+    text-decoration: none;
+    color: #0088cc;
+    border-bottom: 1px dashed #0088cc;
+  }
+
+/*mylist*/
+
+  .mylist {
+    padding: 20px;
+    text-align: center;
+    color: white;
+    background-color: #ccc;
+  }
+
+  .ullist {
+    border: 2px dotted #666666;
+    width: 400px;
+  }
+
+  .pianzina {
+    text-shadow: 0px 5px 25px #666699;
+  }
+
+  .myaudio {
+
+  }
+
+/*mypost*/
+
+  .mypost {
+    padding: 20px;
+    text-align: center;
+    background-color: lightgray;
+  }
+
+  .mypost header h2 {
+    margin: 0;
+  }
+
+  .mypost header time {
+    font-size: 11px;
+    color: #999999;
+  }
+
+  .mypost .content {
+    min-height: 200px;
+    margin-bottom: 20px;
+    font-size: 14px;
+  }
+
+  .mypost figure {
+    position: relative;
+    width: 350px;
+    margin: 20px 0px;
+    overflow: hidden;
+    border-radius: 5px;
+    box-shadow: 0 0 5px #999999;
+  }
+
+  .mypost figcaption {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 90%;
+    padding: 15px 5%;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.8);
+  }
+
+  .mypost img {
+    display: block;
+    max-width: 100%;
+  }
+
+/*mytable*/
+
+  .mytable {
+    padding: 20px;
+    text-align: center;
+
+    background-color: gray;
+  }
+
+  table {
+    border-collapse: collapse;
+    border: 2px dotted #666666;
+    width: auto;
+  }
+
+  caption {
+    text-align: left;
+  }
+
+  th {
+    border: 1px solid black;
+    padding: 10px;
+  }
+
+  td {
+    border: 1px solid lightgray;
+    padding: 5px;
+    padding-right: 15px;
+    text-align: center;
+  }
+
+  .fillintable {
+    background-color: lightgray;
+  }
+
+/*myform*/
+
+  .myforms {
+    padding: 20px;
+    text-align: center;
+
+    background-color: #ccc;
+  }
+
+/*myfooter */
+
+  footer.myfooter {
+    padding: 20px;
+    color: white;
+    background-color: #2F343B;
+  }
+
+  .myfooter .info {
+    float: left;
+  }
+
+  .myfooter .copyright {
+    float: right;
+  }
+
+/*grid*/
+
+  /*@media screen and (max-width: 800px) {
+
+    body {
+      height: auto;
+    }
+  }*/
+
+    @supports (display: grid) {
+  @media screen and (min-width: 800px) {
+
+    .site {
+      display: grid;
+      /*grid-gap: 10px;*/
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      grid-template-rows: 0.5fr 1fr 1fr 0.5fr;
+      grid-template-areas:
+        "myheader myheader myheader myheader"
+        "mylist mylist mypost mypost"
+        "mytable mytable myforms myforms"
+        "myfooter myfooter myfooter myfooter";
+      }
+
+    .myheader {
+      grid-area: myheader;
+      grid-column: 1/5;
+      grid-row: 1/2;
+    }
+
+    .mylist {
+      grid-area: mylist;
+      grid-column: 1/3;
+      grid-row: 2/3;
+      position: relative;
+    }
+
+    .mypost {
+      grid-area: mypost;
+      grid-column: 3/5;
+      grid-row: 2/3;
+      position: relative;
+    }
+
+    .mytable {
+      grid-area: mytable;
+      grid-column: 1/3;
+      grid-row: 3/4;
+      position: relative;
+    }
+
+    .myforms {
+      grid-area: myforms;
+      grid-column: 3/5;
+      grid-row: 3/4;
+      position: relative;
+    }
+
+     .myfooter {
+      grid-area: myfooter;
+      grid-column: 1/5;
+      grid-row: 4/5;
+    } 
+
+      }
+    }
