@@ -1,14 +1,13 @@
-/*global selectors*/
+/*document selectors*/
 
   html,
   body {
-    margin: 0;
+    margin: auto;
     padding: 0px;
     font-size: 16px;
     font-family: 'Noto Sans', sans-serif;
     background: linear-gradient(-45deg, #EE7752, #E73C7E, #23A6D5, #23D5AB);
     background-size: 400% 400%;
-    max-width: 1440px;
   }
 
 /*myheader */
@@ -17,11 +16,12 @@
     padding: 20px;
     background-color: white;
     border-radius: 10px;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.15);
   }
 
   .main-menu ul {
     margin: 0;
-    margin-left: 130px;
+    margin-left: 100px;
     padding: 0;
     list-style: none;
   }
@@ -62,18 +62,23 @@
     display: block;
   }
 
+  .dashed {
+    text-decoration: none;
+    color: #0088cc;
+    border-bottom: 1px dashed #0088cc;
+  }  
+
   .logo {
     position: absolute;
-    top: 10px;
+    top: 15px;
     left: 20px;
     margin: 0;
     z-index: 1;
   }
 
-  .dashed {
-    text-decoration: none;
-    color: #0088cc;
-    border-bottom: 1px dashed #0088cc;
+  .shadow-drop-br:hover {
+    box-shadow: 0 1px 2px rgba(0,0,0,0.15);
+    transition: all 0.3s ease-in-out;
   }
 
 /*mylist*/
@@ -89,8 +94,7 @@
   }
 
   .ullist {
-    width: 400px;
-    background-color: black;
+    background-image: linear-gradient(to right, black, transparent);
     opacity: 0.5;
   }
 
@@ -162,13 +166,23 @@
     padding: 20px;
     text-align: center;
     border-radius: 10px;
-    background-color: #6F9FD8;
+    background-image: url('car.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .mytable:hover {
+    background-image: url('https://cdn.dribbble.com/users/32512/screenshots/4500244/sf7_white_auto_driving_by_gleb.gif');
+    
   }
 
   table {
+    display: table;
+    margin: auto;
     border-collapse: collapse;
     border: 2px dotted #BCBCBE;
     width: auto;
+    color: lightgray;
   }
 
   caption {
@@ -182,50 +196,89 @@
   }
 
   td {
-    border: 1px solid gray;
+    border: 1px solid black;
     padding: 5px;
     padding-right: 15px;
     text-align: center;
   }
 
   .fillintable {
-    background-color: lightgray;
-    opacity: 0.8;
+    background-color: white;
+    opacity: 0.6;
+    color: black;
   }
 
-/*myform*/
+/*mylogin*/
 
-  .myforms {
+  .mylogin {
     padding: 20px;
     text-align: left;
     border-radius: 10px;
 
     background-color: #91A8D0;
+    background-image: url('login.png');
+    background-repeat: no-repeat;
+    background-size: cover;
   }
 
   input[type="text"],
   input[type="password"] {
-      border: 1px solid #ccc;
-      padding: 4px 5px;
-      background: white;
+    border: 1px solid #ccc;
+    padding: 4px 5px;
+    background: white;
+    margin-top: 0.5em;
+    width: 180px;
+    border-radius: 5px;
   }
 
   form input:focus {
     border-color: #0088cc;
   }
 
-  select {
-      border: 1px solid #ccc;
-      padding: 4px 5px;
-      background: white;
+  input[type="submit"] {
+    display: block;
+    padding: 5px 15px;
+    color: #333;
+    background: white;
+    border: none;
+    margin-top: 2em;
   }
 
-  input[type="submit"] {
-      padding: 4px;
-      font-weight: bold;
-      color: #333;
-      background: white;
-      border: none;
+  #login {
+    background:#f5f5f5;
+    border-radius: 10px;
+    padding: 20px;
+    opacity: 0.8;
+  }
+
+  label {
+    display: block;
+  }
+
+/*mytext*/
+
+  .mytext {
+    padding: 20px;
+    text-align: left;
+    border-radius: 10px;
+
+    background-color: #b3c6ff;
+  }
+
+/*mytheme*/
+
+  .mytheme {
+    padding: 20px;
+    text-align: left;
+    border-radius: 10px;
+
+    background-color: #99ccff;
+  }
+
+  select {
+    border: 1px solid #ccc;
+    padding: 4px 5px;
+    background: white;
   }
 
 /*myfooter */
@@ -236,6 +289,11 @@
     color: white;
     background-color: #2F343B;
     border-radius: 10px;
+    background-image: url("cat.png");
+    background-position: 50% 100%;
+    background-size: auto 40px;
+    background-repeat: no-repeat;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.15);
   }
 
   .myfooter .info {
@@ -255,72 +313,127 @@
 
 /*grid*/
 
-  /*@media screen and (max-width: 800px) {
+  @media screen and (max-width: 1024px) {
+
+    header, .mylist, .mypost, .mytable, .mylogin, .mytext, .mytheme, footer.myfooter {
+      border-radius: 0;
+    }
+
+    header {
+      min-height: 40px;
+    }
+
+    .main-menu {
+      position: absolute;
+      top: 25px;
+    }
+
+    #login {
+      position: relative;
+      width: 200px;
+      left: 50%;
+      margin-left: -100px;
+    }
+
+  }
+
+  @media screen and (min-width: 1440px) {
 
     body {
-      height: auto;
+      max-width: 1440px;
     }
-  }*/
 
-    @supports (display: grid) {
-  @media screen and (min-width: 800px) {
+    .logo {
+      left: auto;
+    }
 
-    .site {
-      display: grid;
-      padding: 10px;
-      grid-gap: 20px;
-      grid-template-columns: 1fr 1fr 1fr 1fr;
-      grid-template-rows: 0.16fr 1fr 1fr 0.16fr;
-      grid-template-areas:
-        "myheader myheader myheader myheader"
-        "mylist mylist mypost mypost"
-        "mytable mytable myforms myforms"
-        "myfooter myfooter myfooter myfooter";
+    .login {
+
+    }
+  }
+
+  @supports (display: grid) {
+    @media screen and (min-width: 1024px) {
+
+      .site {
+        display: grid;
+        padding: 10px;
+        grid-gap: 20px;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: 0.16fr 1fr 1fr 1fr 0.16fr;
+        grid-template-areas:
+          "myheader myheader myheader myheader"
+          "mylist mylist mypost mypost"
+          "mytable mytable mylogin mylogin"
+          "mytext mytext mytheme mytheme"
+          "myfooter myfooter myfooter myfooter";
+        }
+
+      .myheader {
+        grid-area: myheader;
+        grid-column: 1/5;
+        grid-row: 1/2;
       }
 
-    .myheader {
-      grid-area: myheader;
-      grid-column: 1/5;
-      grid-row: 1/2;
-    }
+      .mylist {
+        grid-area: mylist;
+        grid-column: 1/3;
+        grid-row: 2/3;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        position: relative;
+      }
 
-    .mylist {
-      grid-area: mylist;
-      grid-column: 1/3;
-      grid-row: 2/3;
-      box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);;
-      position: relative;
-    }
+      .mypost {
+        grid-area: mypost;
+        grid-column: 3/5;
+        grid-row: 2/3;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        position: relative;
+      }
 
-    .mypost {
-      grid-area: mypost;
-      grid-column: 3/5;
-      grid-row: 2/3;
-      box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);;
-      position: relative;
-    }
+      .mytable {
+        grid-area: mytable;
+        grid-column: 1/3;
+        grid-row: 3/4;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        position: relative;
+      }
 
-    .mytable {
-      grid-area: mytable;
-      grid-column: 1/3;
-      grid-row: 3/4;
-      box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);;
-      position: relative;
-    }
+      .mylogin {
+        grid-area: mylogin;
+        grid-column: 3/5;
+        grid-row: 3/4;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        position: relative;
+      }
 
-    .myforms {
-      grid-area: myforms;
-      grid-column: 3/5;
-      grid-row: 3/4;
-      box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);;
-      position: relative;
-    }
+      #login {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
 
-     .myfooter {
-      grid-area: myfooter;
-      grid-column: 1/5;
-      grid-row: 4/5;
-    } 
+      .mytext {
+        grid-area: mytext;
+        grid-column: 1/3;
+        grid-row: 4/5;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        position: relative;
+      }
 
+      .mytheme {
+        grid-area: mytheme;
+        grid-column: 3/5;
+        grid-row: 4/5;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        position: relative;
+      }
+
+       .myfooter {
+        grid-area: myfooter;
+        grid-column: 1/5;
+        grid-row: 5/6;
       }
     }
+  }

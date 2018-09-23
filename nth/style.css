@@ -1,0 +1,126 @@
+/*nth-child*/
+    .container1 {
+        margin:50px;
+        padding:10px;
+        list-style:none;
+        width: 606px;
+        height: 280px;
+    }
+
+    .container1 ul {
+        margin:50px;
+        padding:0;
+        list-style:none;
+    }
+
+    .container1 li {
+        float:left;
+        width:50px;
+        height:50px;
+        margin-bottom:20px;
+        margin-right:20px;
+        border-radius:10px;
+        background:#eee;
+        border:1px solid #ddd;
+        cursor:pointer;
+        text-align:center;
+        line-height:50px;
+        font-size:20px;
+        font-family:"Tahoma", sans-serif;
+        box-shadow:0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    .container1 li:nth-child(odd) {
+        background-color: white;
+        color: black;
+    }
+
+    .container1 li:nth-child(even) {
+        background-color: grey;
+        color: white;
+    }
+
+    /*специфичность*/
+    .container1 li:nth-child(4) {
+        background-color: #4BB1CF;
+    }
+
+/*nth-of-type*/
+    .container2 {
+        margin:50px;
+        padding:10px;
+        list-style:none;
+        width: 606px;
+        height: 280px;
+    }
+
+    .container2 span, strong{
+        display:inline-block;
+        margin-bottom:20px;
+        margin-right:20px;
+        margin-left: 15px;
+        background:#eee;
+        border:1px solid #ddd;
+        cursor:pointer;
+        text-align:center;
+        font-size:20px;
+        font-family:"Tahoma", sans-serif;
+        box-shadow:0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    .container2 span{
+        width:80px;
+        height:40px;
+        line-height:40px;
+    }
+
+    .container2 strong{
+        width:40px;
+        height:80px;
+        line-height:80px;
+        font-weight:normal;
+    }
+
+    .container2 span:nth-of-type(4){
+        color: white;
+        background-color: #4BB1CF;
+    }
+
+    .container2 strong:nth-of-type(4) {
+        color: white;
+        background-color: grey;
+    }
+
+/*nth-child практический пример*/
+    .list {
+        width:400px;
+        height:400px;
+        margin:50px auto;
+        padding:0;
+        list-style:none;
+        border-right:1px dashed #ccc;
+        border-left:1px dashed #ccc;
+    }
+
+    .list li{
+        float:left;
+        width:45%;
+        margin-right:10%;
+        box-sizing:border-box;
+        height:50px;
+        margin-bottom:20px;
+        border-radius:10px;
+        background:#eee;
+        border:1px solid #ddd;
+        text-align:center;
+        line-height:50px;
+        font-size:20px;
+        font-family:"Tahoma", sans-serif;
+        box-shadow:0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    .list li:nth-child(even){
+        margin-right:0;
+        background-color:#5EB95E;
+        color:white;
+    }

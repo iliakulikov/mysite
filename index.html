@@ -17,48 +17,66 @@
     <header class="myheader">
 
       <div class="logo">
-        <img src="logo.svg" width="80" height="80" alt="home">
+        <img src="https://cdn.dribbble.com/users/32512/screenshots/3799399/daimond_morphing_pink.gif" width="50" height="50" alt="home">
       </div>
 
       <nav class="main-menu">
         
         <ul>
           <li class="dropdown">
-            <a href="javascript:void(0)" class="dropbtn"><span class="dashed">сайты</span></a>
+            <a href="javascript:void(0)" class="dropbtn"><span class="dashed">projects</span></a>
             <div class="dropdown-content">
               <a href="http://127.0.0.1:8886/superslideshow">e24</a>
+              <a href="http://127.0.0.1:8081/">durak</a>
               <a href="http://127.0.0.1:8886/amp/article.amp.html#development=1">greenaer</a>
               <a href="http://127.0.0.1:8886/julia/">сайт Юли</a>
               <a href="http://127.0.0.1:8886/ilia">мой сайт</a>
+
             </div>
           </li>
 
-          <li><a class="dashed" href="http://127.0.0.1:8886/bootstrap/">бутстрап</a></li>
+          <li class="dropdown">
+            <a href="javascript:void(0)" class="dropbtn"><span class="dashed">css</span></a>
+            <div class="dropdown-content">
+              <a href="http://127.0.0.1:8886/bootstrap/">shadows</a>
+              <a href="http://127.0.0.1:8886/grid/">grid</a>
+              <a href="http://127.0.0.1:8886/nth/">nth</a>
+              <a href="http://127.0.0.1:8886/leafs/">leafs animation</a>
+
+            </div>
+          </li>
           
-          <li><a class="dashed" href="http://127.0.0.1:8886/slideshow">охуенное слайдшоу</a></li>
-          <li><a class="dashed" href="http://127.0.0.1:8081/">pwa</a></li>
-          <li><a class="dashed" href="http://127.0.0.1:8886/grid/">grid</a></li>
+          <li class="dropdown">
+            <a href="javascript:void(0)" class="dropbtn"><span class="dashed">cool code</span></a>
+            <div class="dropdown-content">
+            <a href="http://127.0.0.1:8886/slideshow">animated slideshow</a>
+
+            </div>
+          </li>
+
+          <li><a class="dashed" href="http://127.0.0.1:8886/boilerplate">boilerplate</a></li>
         </ul>
       </nav>
     </header>
 
-    <section class="mylist">
+    <section class="mylist shadow-drop-br">
+
       <h1><span class="pianzina">mylist</span></h1>
       <ul class="ullist">
         <li><s>.dashed class should work</s>
           <ul>
-            <li>centered screen for > 1500px
+            <li><s>centered screen for > 1440px</s>
               <ul>
-                <li>display height = 100% @ 800px
+                <li>display height = 100% @ 1024px
                   <ul>
-                    <li>responsive content in sections</li>
-                    <li>login section</li>
-                    <li>css grid table</li>
+                    <li><s>responsive content in sections</s></li>
+                    <li><s>login section</s></li>
+                    <li>redo mypost</li>
                   </ul>
                 </li>
               </ul>
             </li>
-            <li>drag and drop sections</li>
+            <li><a class="dashed" href="https://coderthemes.com/hyper/ui-dragula.html">drag and drop</a> sections (<a class="dashed" href="https://github.com/bevacqua/dragula">git</a>)</li>
           </li>
         </ul>
       </li>
@@ -72,7 +90,7 @@
       </section>
     </section>
 
-    <article class="mypost">
+    <article class="mypost shadow-drop-br">
       <header>
           <h2>mypost</h2>
           <time datetime="2018-09-15T11:00:00">
@@ -88,8 +106,7 @@
         </section>
     </article>
 
-      <!-- разобраться как выравнивать ячейки при изменении ширины -->
-    <article class="mytable">
+    <section class="mytable shadow-drop-br">
 
         <table>
           <caption>mytable</caption>
@@ -97,54 +114,50 @@
             <th rowspan="2">Таблица</th>
             <th colspan="2">Столбец</th>
             <th colspan="2">Столбец</th>
-            <th rowspan="2">Еще один</th>
           </tr>
           <tr>
-            <th>Столбечек</th>
-            <th>Столбечек</th>
-            <th>Столбечек</th>
-            <th>Столбечек</th>
+            <th>Столбец</th>
+            <th>Столбец</th>
+            <th>Столбец</th>
+            <th>Столбец</th>
           </tr>
           <tr>
             <td>ячейка</td>
             <td>ячейка</td>
             <td>ячейка</td>
             <td class="fillintable" rowspan="2" colspan="2">ячейка</td>
-            <td>ячейка</td>
           </tr>
           <tr>
-            <td>ячейка</td>
-            <td colspan="2">ячейка</td>
             <td rowspan="2">ячейка</td>
+            <td colspan="2">ячейка</td>
           </tr>
           <tr>
-            <td>ячейка</td>
             <td>ячейка</td>
             <td>ячейка</td>
             <td>ячейка</td>
             <td>ячейка</td>
           </tr>
         </table>
-    </article>
+    </section>
 
-    <article class="myforms">
+    <section class="mylogin shadow-drop-br">
 
-        <form>
+        <form id="login">
 
-          <label for="input1">Логин</label>
+          <label for="input1">login</label>
           <input id="input1" type="text" name="myinput">
-          <label for="input2">Пароль</label>
+
+          <label for="input2">pass</label>
           <input id="input2" type="password" name="password">
 
-          <input id="input3" type="submit" value="Сабмит">
+          <input id="input3" type="submit" value="submit">
 
-          <br>
-          <br>
+        </form>
+    </section>
 
-          <textarea id="input4" name="comment" rows="2" cols="30">myforms</textarea>
-
-          <br>
-          <br>
+    <section class="mytext shadow-drop-br">
+      <form>
+        <textarea id="input4" name="comment" rows="2" cols="30">mytext https://www.youtube.com/watch?v=olE86OdKYQs</textarea>
 
           <input id="input5" type="checkbox" name="galochka">
           <label for="input5">пункт</label>
@@ -160,27 +173,6 @@
           <input id="input8" type="radio" name="radio" value="p" checked>
           <label for="input8">радио</label>
 
-          <br>
-          <br>
-
-          <!-- Если при отправке формы у выбранного варианта задан value, то на сервер отправится значение этого атрибута. В противном случае будет отправлен текст подписи. -->
-          <select name="theme">
-            <option value="light">light</option>
-            <option value="dark">dark</option>
-          </select>
-
-          <br>
-          <br>
-
-          <!-- При отправке данных мультиселекта на сервер с PHP после имени в значении атрибута name ставятся символы квадратных скобок []. Например, <select name="days[]">. Это необязательное требование для имени мультиселекта, а нужно только для корректной обработки данных в PHP. -->
-            <select name="theme" multiple size="5">
-              <option value="light" selected>light</option>
-              <option value="dark">dark</option>
-            </select>
-          </form>
-
-          <br>
-
           <form enctype="multipart/form-data">
 
             <!-- Для этого поля обязательным атрибутом является имя. -->
@@ -189,17 +181,37 @@
             <!-- скрытые поля -->
             <input type="hidden" name="account_number" value="15">
           </form>
-    </article>
+
+      </form>
+    </section>
+
+    <section class="mytheme shadow-drop-br">
+      <form>
+        <!-- Если при отправке формы у выбранного варианта задан value, то на сервер отправится значение этого атрибута. В противном случае будет отправлен текст подписи. -->
+        <select name="theme">
+          <option value="light">light</option>
+          <option value="dark">dark</option>
+        </select>
+
+        <br>
+        <br>
+
+        <!-- При отправке данных мультиселекта на сервер с PHP после имени в значении атрибута name ставятся символы квадратных скобок []. Например, <select name="days[]">. Это необязательное требование для имени мультиселекта, а нужно только для корректной обработки данных в PHP. -->
+        <select name="theme" multiple size="5">
+          <option value="light" selected>light</option>
+          <option value="dark">dark</option>
+        </select>
+      </form>
+    </section>
 
     <footer class="myfooter">
-
-      <span class="info">
+      <!--<span class="info">
         Lorem ipsum is the best company in this room
       </span>
 
       <span class="copyright">
         (c) 2018
-      </span>
+      </span> -->
     </footer>
 
     <!-- <script src="script.js" type="text/javascript"></script> -->
